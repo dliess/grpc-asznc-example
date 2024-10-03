@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package simple;
+
+// Define a service
+service SimpleService {
+    // RPC that takes a request message and returns a response message
+    rpc SimpleRequest (Request) returns (Response);
+}
+
+// Define the request message
+message Request {
+    string message = 1;
+}
+
+// Define the response message
+message Response {
+    string reply = 1;
+}
+
